@@ -5,9 +5,38 @@
     <title>Главная</title>
 </head>
 <body>
+<header th:insert="_header.html"></header>
+<div class="container text-center">
+    <h3>Список товаров</h3>
+</div>
     <header th:insert="_header.html"></header>
     <h1>Товары в наличии</h1>
 
+
+<div class="container">
+    <div class="row mt-5 g-0 text-center">
+        <div class="col-2 col-md-2">Пустое пространство для чегонибудь</div>
+        <div class="col-10 col-md-10">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <img src="https://via.placeholder.com/180x240" class="img-fluid rounded-start" alt="Картинка товара">
+                    </div>
+                    <div class="col-md-8 d-flex flex-column">
+                        <div class="card-body flex-grow-1">
+                            <h5 class="card-title">Описание продукта</h5>
+                            <p class="card-text">Краткое описание продукта. Технические характеристики. Варианты цвета.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/cart" class="btn btn-primary">В Корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:insert="_bootstrap::script"></th:block>
     <th:block th:insert="_bootstrap::script"></th:block>
 </body>
 </html>
